@@ -12,7 +12,15 @@
 
 <body class="text-white bg-dark">
     <div class="container">
+        <h1>Strong Passord Generator</h1>
+        <h2>Generate a secure Password</h2>
 
+        <!-- form -->
+        <form action="password.php">
+            <p>Password length</p>
+            <input type="number" min="1" name="length" required>
+            <button type="submit">Invia</button>
+        </form>
 
     </div>
 </body>
