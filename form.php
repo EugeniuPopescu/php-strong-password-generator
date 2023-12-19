@@ -11,16 +11,28 @@
 </head>
 
 <body class="text-white bg-dark">
-    <div class="container">
-        <h1>Strong Passord Generator</h1>
-        <h2>Generate a secure Password</h2>
+    <div class="container d-flex justify-content-center align-items-center text-center">
+        <div class="m-5">
+            <h1 class="text-warning">Strong Passord Generator</h1>
+            <p>Generate a secure Password (wright length)</p>
 
-        <!-- form -->
-        <form action="password.php">
-            <p>Password length</p>
-            <input type="number" min="1" name="length" required>
-            <button type="submit">Invia</button>
-        </form>
+            <div class="">
+                <!-- form -->
+                <form action="password.php">
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="fs-3">Password length:</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <input name="length" type="number" class="form-control" placeholder="Length.." required>
+                                <button class="btn btn-outline-secondary" type="submit">></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
     </div>
 </body>

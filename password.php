@@ -1,3 +1,6 @@
+<!-- inclusione file functions.php -->
+<?php include __DIR__ . "/functions.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,28 +17,16 @@
 $char = $_GET["length"] ?? "vuoto";
 ?>
 
-<?php
-function generatePassword($length)
-{
-    // caratteri per la password
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+{}|[]';
-
-    // mischio i caratteri 
-    $shuffled_characters = str_shuffle($characters);
-
-    // estraggo la sottostringa della lunghezza che vogliamo
-    $password = substr($shuffled_characters, 0, $length);
-
-    return $password;
-}
-?>
-
 <body class="text-white bg-dark">
-    <div class="container">
-        <?php
-        $passwGenerated = generatePassword($char);
-        echo "<p>$passwGenerated</p>";
-        ?>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card m-5 p-3">
+            <p class="fs-2">Your Password is:</p>
+            <?php
+            $passwGenerated = generatePassword($char);
+            echo "<p class='fs-1 text-danger'>$passwGenerated</p>";
+            ?>
+            <a href="form.php">Go to form</a>
+        </div>
     </div>
 </body>
 
