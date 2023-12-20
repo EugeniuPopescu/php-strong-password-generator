@@ -25,7 +25,8 @@
                         </div>
                         <div class="col-6">
                             <div class="input-group">
-                                <input name="length" type="number" class="form-control" placeholder="Length.." required>
+                                <!-- il name serve per passare il nome del form -->
+                                <input name="length" type="number" class="form-control" placeholder="Length..">
                                 <button class="btn btn-outline-secondary" type="submit">></button>
                             </div>
                         </div>
