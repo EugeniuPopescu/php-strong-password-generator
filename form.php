@@ -19,6 +19,7 @@
             <div class="">
                 <!-- form -->
                 <form action="password.php">
+                    <!-- row length -->
                     <div class="row">
                         <div class="col-6">
                             <span class="fs-3">Password length:</span>
@@ -28,6 +29,23 @@
                                 <!-- il name serve per passare il nome del form -->
                                 <input name="length" type="number" class="form-control" placeholder="Length..">
                                 <button class="btn btn-outline-secondary" type="submit">></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row options -->
+                    <div class="row my-3">
+                        <div class="col-6">
+                            <span class="">Chose if your password does have:</span>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <input type="checkbox" name="numbers"> Include numbers
+                            </div>
+                            <div>
+                                <input type="checkbox" name="letters"> Include letters
+                            </div>
+                            <div>
+                                <input type="checkbox" name="symbols"> Include symbols
                             </div>
                         </div>
                     </div>

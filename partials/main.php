@@ -10,8 +10,31 @@ $error = false;
 
 // operatore di covalescenza nulla
 $pwdLength = $_GET["length"] ?? false;
+$checkNumbers = $_GET["numbers"] ?? false;
+$checkLetters = $_GET["letters"] ?? false;
+$checkSymbols = $_GET["symbols"] ?? false;
 
-// controlli SE
+// stringa caratteri per la password
+$characters = "";
+
+if ($checkNumbers) {
+    $characters .= "0123456789";
+}
+
+if ($checkLetters) {
+    $characters .= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+}
+
+if ($checkSymbols) {
+    $characters .= "!@#$%^&*()_+{}|[]{}~<>";
+}
+
+// controllo SE è selzionata almeno una check box
+if (!$checkNumbers && !$checkLetters && !$checkSymbols) {
+    $error = "Seleziona almeno una check box";
+}
+
+// controlli SE si veriifcano errori nello scrivere la lunghezza
 if ($pwdLength === false) {
     // SE non metto nessun valore
     $error = "Non hai specificato la lunghezza della password";
@@ -28,5 +51,5 @@ if ($pwdLength === false) {
 
 if (!$error) {
     // genera password
-    $result = generatePassword($pwdLength);
+    $result = generatePassword($pwdLength, $characters);
 }

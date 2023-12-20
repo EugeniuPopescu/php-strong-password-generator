@@ -1,10 +1,7 @@
 <?php
-function generatePassword($length)
+function generatePassword($length, $characters)
 {
     $password = "";
-
-    // stringa caratteri per la password
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+{}|[]';
 
     // lista caratteri casiali max
     $maxRandNumb = strlen($characters) - 1;
