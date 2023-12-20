@@ -1,5 +1,5 @@
 <!-- inclusione file functions.php -->
-<?php include __DIR__ . "/functions.php" ?>
+<?php include __DIR__ . "/partials/main.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
