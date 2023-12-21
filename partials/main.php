@@ -50,6 +50,5 @@ if ($pwdLength === false) {
 }
 
 if (!$error) {
-    // genera password
     $result = generatePassword($pwdLength, $characters);
 }

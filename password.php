@@ -1,4 +1,4 @@
-<!-- inclusione file functions.php -->
+<!-- inclusione file main.php -->
 <?php include __DIR__ . "/partials/main.php" ?>
 
 <!DOCTYPE html>

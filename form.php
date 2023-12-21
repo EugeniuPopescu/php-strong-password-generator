@@ -1,3 +1,6 @@
+<!-- inclusione file main.php -->
+<?php include __DIR__ . "/partials/main.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,14 +14,14 @@
 </head>
 
 <body class="text-white bg-dark">
-    <div class="container d-flex justify-content-center align-items-center text-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center">
         <div class="m-5">
             <h1 class="text-warning">Strong Passord Generator</h1>
             <p>Generate a secure Password (wright length)</p>
 
             <div class="">
                 <!-- form -->
-                <form action="password.php">
+                <form action="form.php">
                     <!-- row length -->
                     <div class="row">
                         <div class="col-6">
@@ -53,10 +56,25 @@
             </div>
         </div>
 
+        <?php if ($pwdLength) { ?>
+            <div class="card m-5 p-3">
+                <!-- controllo SE l'errore è falso -->
+                <?php if (!$error) { ?>
+                    <p class="fs-3 text-primary">Your Password is:</p>
+                    <p class="fs-5"><?php echo $result ?></p>
+                <?php } else { ?>
+                    <p class="fs-3 text-danger">ERROR:</p>
+                    <p class="fs-5"><?php echo $error ?></p>
+                <?php } ?>
+                <a href="form.php">Retry</a>
+
+            </div>
+        <?php } ?>
+
     </div>
 </body>
 
 <!-- script bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha385-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </html>
